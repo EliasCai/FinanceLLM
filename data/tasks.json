@@ -1,0 +1,2698 @@
+[
+    {
+        "tid": "tttt----3",
+        "team": [
+            {
+                "id": "tttt----3----3-2-1",
+                "question": "2019年度（合并）常熟银行的职工总数有多少人？"
+            },
+            {
+                "id": "tttt----3----3-2-2",
+                "question": "该公司披露的硕士或研究生学历（及以上）的有多少人？"
+            },
+            {
+                "id": "tttt----3----3-2-3",
+                "question": "20201月1日至年底退休了多少人？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2019年度（合并）常熟银行的职工总数有多少人？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询2019年度（合并）常熟银行的职工总数",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "该公司披露的硕士或研究生学历（及以上）的有多少人？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询常熟银行硕士或研究生学历（及以上）的员工人数",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "20201月1日至年底退休了多少人？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询2020年1月1日至年底期间常熟银行退休的人数",
+                        "database": "AStockEventsDB.LC_Credit"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----4",
+        "team": [
+            {
+                "id": "tttt----4----4-2-1",
+                "question": "互联网金融属于科技概念的什么分支？这个概念的英文名称是什么？"
+            },
+            {
+                "id": "tttt----4----4-2-2",
+                "question": "截至2021年底，这个概念有多少只股票（不包含已经调出的）？调出了多少只股票？"
+            },
+            {
+                "id": "tttt----4----4-2-3",
+                "question": "哪些是2020年纳入的，A股简称分别叫什么？"
+            }
+        ],
+        "task": [
+            {
+                "question": "互联网金融属于科技概念的什么分支？这个概念的英文名称是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定互联网金融在科技概念中的具体分类。",
+                        "database": "AStockIndustryDB.LC_ConceptList"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查找互联网金融概念的英文名称。",
+                        "database": "AStockIndustryDB.LC_ConceptList"
+                    }
+                ]
+            },
+            {
+                "question": "截至2021年底，这个概念有多少只股票（不包含已经调出的）？调出了多少只股票？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "统计截至2021年底，归属于互联网金融概念下的现存股票数量。",
+                        "database": "AStockIndustryDB.LC_COConcept"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "计算从互联网金融概念中被移除的股票总数。",
+                        "database": "AStockIndustryDB.LC_COConcept"
+                    }
+                ]
+            },
+            {
+                "question": "哪些是2020年纳入的，A股简称分别叫什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "列出所有于2020年内新加入互联网金融概念板块的股票。",
+                        "database": "AStockIndustryDB.LC_COConcept"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "获取这些2020年新增加到互联网金融概念板块的A股公司的简称。",
+                        "database": "AStockIndustryDB.LC_COConcept"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----5",
+        "team": [
+            {
+                "id": "tttt----5----5-2-1",
+                "question": "化工纳入过多少个子类概念？"
+            },
+            {
+                "id": "tttt----5----5-2-2",
+                "question": "2021年纳入过多少个？分别是？"
+            },
+            {
+                "id": "tttt----5----5-2-3",
+                "question": "2021年纳入的这些概念的股票有多少只？分别属于哪些三级行业（仅考虑2021年新纳入的行业数据）？"
+            }
+        ],
+        "task": [
+            {
+                "question": "化工纳入过多少个子类概念？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询化工行业被划分为多少个子类概念",
+                        "database": "IndexDB.LC_IndexBasicInfo"
+                    }
+                ]
+            },
+            {
+                "question": "2021年纳入过多少个？分别是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2021年内化工行业新增了多少个子类概念",
+                        "database": "IndexDB.LC_IndexBasicInfo"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "列出2021年新增的所有化工子类概念名称",
+                        "database": "IndexDB.LC_IndexBasicInfo"
+                    }
+                ]
+            },
+            {
+                "question": "2021年纳入的这些概念的股票有多少只？分别属于哪些三级行业（仅考虑2021年新纳入的行业数据）？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "对于2021年每个新增的化工子类概念，统计其包含的股票数量",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "识别并记录2021年新纳入的每个化工子类概念所对应的三级行业分类",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----6",
+        "team": [
+            {
+                "id": "tttt----6----6-2-1",
+                "question": "天顺风能披露了多少次担保信息？"
+            },
+            {
+                "id": "tttt----6----6-2-2",
+                "question": "他一共披露过多少次借贷信息？2021年披露了多少次？"
+            },
+            {
+                "id": "tttt----6----6-2-3",
+                "question": "他一共披露了多少次重大资产重组信息？2021年披露了多少次？2020年披露了多少次？"
+            }
+        ],
+        "task": [
+            {
+                "question": "天顺风能披露了多少次担保信息？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询天顺风能在公司担保明细表中披露的担保信息次数。",
+                        "database": "AStockEventsDB.LC_Warrant"
+                    }
+                ]
+            },
+            {
+                "question": "他一共披露过多少次借贷信息？2021年披露了多少次？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询天顺风能在公司借贷明细表中披露的借贷信息总次数。",
+                        "database": "AStockEventsDB.LC_Credit"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询天顺风能在2021年于公司借贷明细表中披露的借贷信息次数。",
+                        "database": "AStockEventsDB.LC_Credit"
+                    }
+                ]
+            },
+            {
+                "question": "他一共披露了多少次重大资产重组信息？2021年披露了多少次？2020年披露了多少次？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询天顺风能在公司资产重组明细表中披露的重大资产重组信息总次数。",
+                        "database": "AStockEventsDB.LC_Regroup"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询天顺风能在2021年于公司资产重组明细表中披露的重大资产重组信息次数。",
+                        "database": "AStockEventsDB.LC_Regroup"
+                    },
+                    {
+                        "id": "3",
+                        "todo": "查询天顺风能在2020年于公司资产重组明细表中披露的重大资产重组信息次数。",
+                        "database": "AStockEventsDB.LC_Regroup"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----7",
+        "team": [
+            {
+                "id": "tttt----7----7-2-1",
+                "question": "天顺风能属于哪个三级行业？"
+            },
+            {
+                "id": "tttt----7----7-2-2",
+                "question": "2021年发布的该行业的股票有多少只？"
+            },
+            {
+                "id": "tttt----7----7-2-3",
+                "question": "该行业8月公布的最高行业营业收入是多少万元？"
+            }
+        ],
+        "task": [
+            {
+                "question": "天顺风能属于哪个三级行业？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询天顺风能的证券代码和简称",
+                        "database": "ConstantDB.SecuMain"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "根据天顺风能的证券代码，查询其所属的三级行业分类",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "2021年发布的该行业的股票有多少只？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定该行业的具体名称或代码",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询2021年在该行业中上市的所有股票的数量",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "该行业8月公布的最高行业营业收入是多少万元？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定该行业的具体名称或代码",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询该行业所有公司8月份公布的营业收入数据",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": "3",
+                        "todo": "从上一步骤获取的数据中，找出最高的营业收入值，并转换为万元单位",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----8",
+        "team": [
+            {
+                "id": "tttt----8----8-2-1",
+                "question": "首钢股份发布增发和配股次数分别是多少次？"
+            },
+            {
+                "id": "tttt----8----8-2-2",
+                "question": "该股每次增发预计募集资金总额分别是？增发预计募集资金总额最高的公司中文全称是？金额是？"
+            },
+            {
+                "id": "tttt----8----8-2-3",
+                "question": "该股每次配股发行费用总额分别是？配股发行费用总额最高的中文全称是？金额是？"
+            }
+        ],
+        "task": [
+            {
+                "question": "首钢股份发布增发和配股次数分别是多少次？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询首钢股份历次增发的记录数量",
+                        "database": "AStockFinanceDB.LC_AShareSeasonedNewIssue"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询首钢股份历次配股的记录数量",
+                        "database": "AStockFinanceDB.LC_ASharePlacement"
+                    }
+                ]
+            },
+            {
+                "question": "该股每次增发预计募集资金总额分别是？增发预计募集资金总额最高的公司中文全称是？金额是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询首钢股份每次增发预计募集资金总额",
+                        "database": "AStockFinanceDB.LC_AShareSeasonedNewIssue"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "在上述结果中找出预计募集资金总额最高的一次增发，并获取对应的公司中文全称和金额",
+                        "database": "AStockFinanceDB.LC_AShareSeasonedNewIssue"
+                    }
+                ]
+            },
+            {
+                "question": "该股每次配股发行费用总额分别是？配股发行费用总额最高的中文全称是？金额是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询首钢股份每次配股发行费用总额",
+                        "database": "AStockFinanceDB.LC_ASharePlacement"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "在上述结果中找出发行费用总额最高的一次配股，并获取对应的公司中文全称和金额",
+                        "database": "AStockFinanceDB.LC_ASharePlacement"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----9",
+        "team": [
+            {
+                "id": "tttt----9----9-2-1",
+                "question": "新天绿能2020年年度研发投入合计是多少元？研发人员数量为多少人？（合并报表调整后的，金额保留2位小数）"
+            },
+            {
+                "id": "tttt----9----9-2-2",
+                "question": "费用化研发占比为？资本化研发占比为？"
+            },
+            {
+                "id": "tttt----9----9-2-3",
+                "question": "上一年度研发投入最高的三家公司是？（回答中文简称）"
+            }
+        ],
+        "task": [
+            {
+                "question": "新天绿能2020年年度研发投入合计是多少元？研发人员数量为多少人？（合并报表调整后的，金额保留2位小数）",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询新天绿能2020年的年度研发投入总和，要求数据来自合并报表且经过调整后，并将结果保留两位小数。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": 2,
+                        "todo": "查询新天绿能2020年的研发人员总数，确保数据来自合并报表。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "费用化研发占比为？资本化研发占比为？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "获取新天绿能最新年报中关于研发支出的详细信息，包括费用化研发和资本化研发的具体数额。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": 2,
+                        "todo": "基于已获得的研发支出数据，计算费用化研发占总研发支出的比例。",
+                        "database": ""
+                    },
+                    {
+                        "id": 3,
+                        "todo": "基于已获得的研发支出数据，计算资本化研发占总研发支出的比例。",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "上一年度研发投入最高的三家公司是？（回答中文简称）",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "确定当前年份前一年作为查询依据的年份。",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "根据所定年份，查询所有公司当年的研发投入总额。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": 3,
+                        "todo": "从查询结果中找出研发投入总额排名前三的公司，并提供它们的中文简称。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----10",
+        "team": [
+            {
+                "id": "tttt----10----10-2-1",
+                "question": "000958公司2021年主营业务产品有哪些？（合并报表调整后的，金额保留2位小数）"
+            },
+            {
+                "id": "tttt----10----10-2-2",
+                "question": "公司2021年比2020年主营业务产品减少的有？"
+            },
+            {
+                "id": "tttt----10----10-2-3",
+                "question": "公司2021年度经营情况的信息发布日期是（XXXX-XX-XX）？"
+            }
+        ],
+        "task": [
+            {
+                "question": "000958公司2021年主营业务产品有哪些？（合并报表调整后的，金额保留2位小数）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询000958公司在2021年的主营业务构成，包括各类产品的收入情况，并确保数据是基于合并报表调整后的结果。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "公司2021年比2020年主营业务产品减少的有？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "对比000958公司2020年和2021年的主营业务构成，找出2021年相对于2020年主营业务收入减少的产品类别。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "公司2021年度经营情况的信息发布日期是（XXXX-XX-XX）？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查找000958公司2021年度经营情况报告的具体发布日期。",
+                        "database": "AStockFinanceDB.LC_AuditOpinion"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----11",
+        "team": [
+            {
+                "id": "tttt----11----11-2-1",
+                "question": "工商银行的H股代码、中文名称及英文名称分别是？"
+            },
+            {
+                "id": "tttt----11----11-2-2",
+                "question": "该公司的主席及公司邮箱是？"
+            },
+            {
+                "id": "tttt----11----11-2-3",
+                "question": "该公司2020年12月底披露的变更前后的员工人数为多少人？"
+            }
+        ],
+        "task": [
+            {
+                "question": "工商银行的H股代码、中文名称及英文名称分别是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询工商银行的H股代码",
+                        "database": "ConstantDB.SecuMain"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询工商银行的中文名称",
+                        "database": "ConstantDB.SecuMain"
+                    },
+                    {
+                        "id": "3",
+                        "todo": "查询工商银行的英文名称",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "该公司的主席及公司邮箱是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询工商银行的主席姓名",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询工商银行的公司邮箱",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "该公司2020年12月底披露的变更前后的员工人数为多少人？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询工商银行在2020年12月底披露的变更前的员工人数",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询工商银行在2020年12月底披露的变更后的员工人数",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----12",
+        "team": [
+            {
+                "id": "tttt----12----12-2-1",
+                "question": "今天是2020年6月24日，阅文集团近一个月最高价是（保留2位小数）？"
+            },
+            {
+                "id": "tttt----12----12-2-2",
+                "question": "近一年最低价？"
+            },
+            {
+                "id": "tttt----12----12-2-3",
+                "question": "差额是？"
+            }
+        ],
+        "task": [
+            {
+                "question": "今天是2020年6月24日，阅文集团近一个月最高价是（保留2位小数）？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询阅文集团从2020年5月24日至2020年6月24日期间的每日股价最高价。",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从上一步骤获取的数据中确定最高的股价，并保留两位小数。",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "近一年最低价？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询阅文集团从2019年6月24日至2020年6月24日期间的每日股价最低价。",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从上一步骤获取的数据中确定最低的股价，并保留两位小数。",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "差额是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "使用前两个问题的结果计算阅文集团近一个月最高价与近一年最低价之间的差额，并保留两位小数。",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----13",
+        "team": [
+            {
+                "id": "tttt----13----13-2-1",
+                "question": "今天是2020年10月27日，当日收盘价第3高的港股是？(以下都回答简称)"
+            },
+            {
+                "id": "tttt----13----13-2-2",
+                "question": "成交量第3高的是？"
+            },
+            {
+                "id": "tttt----13----13-2-3",
+                "question": "换手率第3高的是？"
+            }
+        ],
+        "task": [
+            {
+                "question": "今天是2020年10月27日，当日收盘价第3高的港股是？(以下都回答简称)",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2020年10月27日所有港股的收盘价，并按价格从高到低排序",
+                        "database": "HKStockDB.CS_HKStockPerformance"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "确定排名第三的股票代码",
+                        "database": ""
+                    },
+                    {
+                        "id": "3",
+                        "todo": "使用股票代码查询对应的股票简称",
+                        "database": "ConstantDB.HK_SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "成交量第3高的是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2020年10月27日所有港股的成交量，并按成交量从高到低排序",
+                        "database": "HKStockDB.CS_HKStockPerformance"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "确定成交量排名第三的股票代码",
+                        "database": ""
+                    },
+                    {
+                        "id": "3",
+                        "todo": "使用股票代码查询对应的股票简称",
+                        "database": "ConstantDB.HK_SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "换手率第3高的是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2020年10月27日所有港股的换手率，并按换手率从高到低排序",
+                        "database": "HKStockDB.CS_HKStockPerformance"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "确定换手率排名第三的股票代码",
+                        "database": ""
+                    },
+                    {
+                        "id": "3",
+                        "todo": "使用股票代码查询对应的股票简称",
+                        "database": "ConstantDB.HK_SecuMain"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----14",
+        "team": [
+            {
+                "id": "tttt----14----14-2-1",
+                "question": "2019-09-02，当日收盘价最高的港股是？(以下都回答简称)"
+            },
+            {
+                "id": "tttt----14----14-2-2",
+                "question": "2019-09-02，当日成交量最高的是？"
+            },
+            {
+                "id": "tttt----14----14-2-3",
+                "question": "2019-09-02，当日换手率最高的是？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2019-09-02，当日收盘价最高的港股是？(以下都回答简称)",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2019-09-02所有港股的收盘价信息",
+                        "database": "ConstantDB.SecuMain"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从查询结果中找出收盘价最高的港股简称",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "2019-09-02，当日成交量最高的是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2019-09-02所有股票的成交量信息",
+                        "database": "ConstantDB.SecuMain"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从查询结果中找出成交量最高的股票简称",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "2019-09-02，当日换手率最高的是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2019-09-02所有股票的换手率信息",
+                        "database": "ConstantDB.SecuMain"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从查询结果中找出换手率最高的股票简称",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----15",
+        "team": [
+            {
+                "id": "tttt----15----15-2-1",
+                "question": "2020年之间 哪些公司进行公司名称全称变更，公司代码是什么？"
+            },
+            {
+                "id": "tttt----15----15-2-2",
+                "question": "这些公司A股证券代码分别是什么？"
+            },
+            {
+                "id": "tttt----15----15-2-3",
+                "question": "这些公司的证券内部编码是多少？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2020年之间 哪些公司进行公司名称全称变更，公司代码是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "找出2020年内所有进行了公司名称全称变更的记录，包括变更前后的公司名称以及公司的代码。",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "这些公司A股证券代码分别是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "根据之前找到的进行了公司名称变更的公司代码列表，查找这些公司在A股市场的证券代码。",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "这些公司的证券内部编码是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "利用已经获取到的公司A股证券代码，查询并确定这些公司的证券内部编码。",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----16",
+        "team": [
+            {
+                "id": "tttt----16----16-2-1",
+                "question": "2021-12-31报告期内，查询总资产最高的公司是?"
+            },
+            {
+                "id": "tttt----16----16-2-2",
+                "question": "经营活动产生的现金流量净额最高的公司是？"
+            },
+            {
+                "id": "tttt----16----16-2-3",
+                "question": "这两个公司净利润差额是？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2021-12-31报告期内，查询总资产最高的公司是?",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2021-12-31报告期末所有公司的总资产数据",
+                        "database": "AStockFinanceDB.LC_BalanceSheet"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从上一步结果中找出总资产值最高的公司名称",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "经营活动产生的现金流量净额最高的公司是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2021-12-31报告期末所有公司经营活动产生的现金流量净额数据",
+                        "database": "AStockFinanceDB.LC_CashFlowStatement"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从上一步结果中找出经营活动产生的现金流量净额值最高的公司名称",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "这两个公司净利润差额是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定上述两个问题中提到的两家公司名称",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询这两家公司2021-12-31报告期末的净利润数据",
+                        "database": "AStockFinanceDB.LC_IncomeStatement"
+                    },
+                    {
+                        "id": "3",
+                        "todo": "计算这两家公司的净利润差额",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----15",
+        "team": [
+            {
+                "id": "tttt----15----15-2-1",
+                "question": "2020年之间 哪些公司进行公司名称全称变更，公司代码是什么？"
+            },
+            {
+                "id": "tttt----15----15-2-2",
+                "question": "这些公司A股证券代码分别是什么？"
+            },
+            {
+                "id": "tttt----15----15-2-3",
+                "question": "这些公司的证券内部编码是多少？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2020年之间 哪些公司进行公司名称全称变更，公司代码是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "找出2020年内所有进行了公司名称全称变更的记录，包括变更前后的公司名称以及公司的代码。",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "这些公司A股证券代码分别是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "根据之前找到的进行了公司名称变更的公司代码列表，查找这些公司在A股市场的证券代码。",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "这些公司的证券内部编码是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "利用已经获取到的公司A股证券代码，查询并确定这些公司的证券内部编码。",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----16",
+        "team": [
+            {
+                "id": "tttt----16----16-2-1",
+                "question": "2021-12-31报告期内，查询总资产最高的公司是?"
+            },
+            {
+                "id": "tttt----16----16-2-2",
+                "question": "经营活动产生的现金流量净额最高的公司是？"
+            },
+            {
+                "id": "tttt----16----16-2-3",
+                "question": "这两个公司净利润差额是？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2021-12-31报告期内，查询总资产最高的公司是?",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2021-12-31报告期末所有公司的总资产数据",
+                        "database": "AStockFinanceDB.LC_BalanceSheet"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从上一步结果中找出总资产值最高的公司名称",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "经营活动产生的现金流量净额最高的公司是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2021-12-31报告期末所有公司经营活动产生的现金流量净额数据",
+                        "database": "AStockFinanceDB.LC_CashFlowStatement"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从上一步结果中找出经营活动产生的现金流量净额值最高的公司名称",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "这两个公司净利润差额是？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定上述两个问题中提到的两家公司名称",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询这两家公司2021-12-31报告期末的净利润数据",
+                        "database": "AStockFinanceDB.LC_IncomeStatement"
+                    },
+                    {
+                        "id": "3",
+                        "todo": "计算这两家公司的净利润差额",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----17",
+        "team": [
+            {
+                "id": "tttt----17----17-2-1",
+                "question": "2020年4月涨幅前10的港股股票有哪些?"
+            },
+            {
+                "id": "tttt----17----17-2-2",
+                "question": "2020年5月涨幅前10的港股股票有哪些？"
+            },
+            {
+                "id": "tttt----17----17-2-3",
+                "question": "2020年4月涨幅前十的股票中， 5月涨幅最小的是？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2020年4月涨幅前10的港股股票有哪些?",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "找出2020年4月所有港股股票的起始价格和结束价格",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "根据起始价格和结束价格计算每只股票的涨幅百分比",
+                        "database": ""
+                    },
+                    {
+                        "id": 3,
+                        "todo": "按照涨幅百分比从高到低排序，列出排名前10的股票",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "2020年5月涨幅前10的港股股票有哪些？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "找出2020年5月所有港股股票的起始价格和结束价格",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "根据起始价格和结束价格计算每只股票的涨幅百分比",
+                        "database": ""
+                    },
+                    {
+                        "id": 3,
+                        "todo": "按照涨幅百分比从高到低排序，列出排名前10的股票",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "2020年4月涨幅前十的股票中， 5月涨幅最小的是？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "确定2020年4月涨幅前10的港股股票名单",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "对于这10只股票，找到它们在2020年5月的起始价格和结束价格",
+                        "database": ""
+                    },
+                    {
+                        "id": 3,
+                        "todo": "基于5月的起始价格和结束价格，计算这10只股票各自的涨幅百分比",
+                        "database": ""
+                    },
+                    {
+                        "id": 4,
+                        "todo": "比较这些股票5月的涨幅百分比，确定其中涨幅最小的一只",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----18",
+        "team": [
+            {
+                "id": "tttt----18----1-2-1",
+                "question": "东航物流的注册邮箱是什么？"
+            },
+            {
+                "id": "tttt----18----1-2-2",
+                "question": "该公司的实控人是谁？"
+            },
+            {
+                "id": "tttt----18----1-2-3",
+                "question": "该实控人名下一共有多少家公司？"
+            },
+            {
+                "id": "tttt----18----1-2-4",
+                "question": "这些公司从事物流业务的有多少家？"
+            }
+        ],
+        "task": [
+            {
+                "question": "东航物流的注册邮箱是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询东航物流公司的注册邮箱信息。",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "该公司的实控人是谁？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定东航物流公司的实际控制人姓名或实体名称。",
+                        "database": "AStockShareholderDB.LC_ShareholderStructure"
+                    }
+                ]
+            },
+            {
+                "question": "该实控人名下一共有多少家公司？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "基于上一步得到的东航物流公司实控人的姓名或实体名称，统计其实控的所有公司数量。",
+                        "database": "AStockShareholderDB.LC_ShareholderStructure"
+                    }
+                ]
+            },
+            {
+                "question": "这些公司从事物流业务的有多少家？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "根据上一步中获取的实控人名下所有公司的列表，筛选出主营业务为物流行业的公司，并计算其数量。",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----19",
+        "team": [
+            {
+                "id": "tttt----19----2-2-1",
+                "question": "航锦科技股份有限公司是否变更过公司名称？"
+            },
+            {
+                "id": "tttt----19----2-2-2",
+                "question": "该公司涉及回购的最大的一笔金额是多少？"
+            },
+            {
+                "id": "tttt----19----2-2-3",
+                "question": "该年度前十大股东的持股比例变成了多少？"
+            },
+            {
+                "id": "tttt----19----2-2-4",
+                "question": "当年公司的技术与生产人员一共有多少人？"
+            }
+        ],
+        "task": [
+            {
+                "question": "航锦科技股份有限公司是否变更过公司名称？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询航锦科技股份有限公司是否有历史上的名称变更记录。",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "该公司涉及回购的最大的一笔金额是多少？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查找航锦科技股份有限公司所有回购相关的公告信息，以确定最大一笔回购金额的具体数值。",
+                        "database": "AStockEventsDB.LC_Credit"
+                    }
+                ]
+            },
+            {
+                "question": "该年度前十大股东的持股比例变成了多少？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "获取航锦科技股份有限公司某一特定年度内前十大股东各自的持股比例。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "当年公司的技术与生产人员一共有多少人？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询航锦科技股份有限公司在指定年份的技术与生产人员总数。",
+                        "database": "AStockFinanceDB.LC_AuditOpinion"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----20",
+        "team": [
+            {
+                "id": "tttt----20----3-2-1",
+                "question": "申万一级行业是交通运输的公司有多少家？"
+            },
+            {
+                "id": "tttt----20----3-2-2",
+                "question": "这些公司中多少家是20年变更的行业？"
+            },
+            {
+                "id": "tttt----20----3-2-3",
+                "question": "变更后又在21年取消的有哪些公司？"
+            }
+        ],
+        "task": [
+            {
+                "question": "申万一级行业是交通运输的公司有多少家？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询所有公司的申万一级行业分类，并筛选出属于交通运输行业的公司数量。",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "这些公司中多少家是20年变更的行业？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "从上述筛选出的交通运输行业中，进一步查询在2020年内发生过行业变更的公司数量。",
+                        "database": "AStockBasicInfoDB.LC_StockChange"
+                    }
+                ]
+            },
+            {
+                "question": "变更后又在21年取消的有哪些公司？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "从上一步骤得到的2020年内发生行业变更且当前属于交通运输行业的公司列表中，筛选出那些在2021年再次变更回原行业或完全取消交通运输行业属性的公司名单。",
+                        "database": "AStockBasicInfoDB.LC_StockChange"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----21",
+        "team": [
+            {
+                "id": "tttt----21----4-2-1",
+                "question": "科达制造2021年8月4日当天的最高价与最低价分别是多少"
+            },
+            {
+                "id": "tttt----21----4-2-2",
+                "question": "该股票的概念板块当年多少次涨停？"
+            },
+            {
+                "id": "tttt----21----4-2-3",
+                "question": "该股票所属的一级概念是什么？"
+            },
+            {
+                "id": "tttt----21----4-2-4",
+                "question": "该公司所属二级行业当日行业总市值有多少"
+            }
+        ],
+        "task": []
+    },
+    {
+        "tid": "tttt----22",
+        "team": [
+            {
+                "id": "tttt----22----5-2-1",
+                "question": "涪陵榨菜的注册地址在哪？"
+            },
+            {
+                "id": "tttt----22----5-2-2",
+                "question": "该公司上市公告书中的前十大股东是哪些？"
+            },
+            {
+                "id": "tttt----22----5-2-3",
+                "question": "这些股东里有几家是基金管理公司？"
+            },
+            {
+                "id": "tttt----22----5-2-4",
+                "question": "存在资料的公司有几家，这些公司在2019年分别管理了多少种基金？"
+            }
+        ],
+        "task": []
+    },
+    {
+        "tid": "tttt----23",
+        "team": [
+            {
+                "id": "tttt----23----6-2-1",
+                "question": "唐山港集团股份有限公司是什么时间上市的（回答XXXX-XX-XX）"
+            },
+            {
+                "id": "tttt----23----6-2-2",
+                "question": "当年一共上市了多少家企业？"
+            },
+            {
+                "id": "tttt----23----6-2-3",
+                "question": "这些企业有多少是在北京注册的？"
+            },
+            {
+                "id": "tttt----23----6-2-4",
+                "question": "哪些是注册和办公都在海淀的？"
+            }
+        ],
+        "task": []
+    },
+    {
+        "tid": "tttt----24",
+        "team": [
+            {
+                "id": "tttt----24----7-2-1",
+                "question": "山东药玻2020年发布的19年年报的大股东是谁"
+            },
+            {
+                "id": "tttt----24----7-2-2",
+                "question": "19年一共有多少户股东？"
+            },
+            {
+                "id": "tttt----24----7-2-3",
+                "question": "他的流通股本有多少股？"
+            },
+            {
+                "id": "tttt----24----7-2-4",
+                "question": "19年的股权变动中涉及股数量最大的一次非专场大宗交易是在哪天正式变动的？（时间回答XXXX-XX-XX）"
+            }
+        ],
+        "task": [
+            {
+                "question": "山东药玻2020年发布的19年年报的大股东是谁",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询山东药玻2019年的年度报告中列出的第一大股东信息",
+                        "database": "AStockShareholderDB.LC_ShareStru"
+                    }
+                ]
+            },
+            {
+                "question": "19年一共有多少户股东？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询山东药玻2019年的年度报告中记录的总股东户数",
+                        "database": "AStockShareholderDB.LC_ShareStru"
+                    }
+                ]
+            },
+            {
+                "question": "他的流通股本有多少股？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询山东药玻2019年的年度报告中提到的流通股本总量",
+                        "database": "AStockShareholderDB.LC_ShareStru"
+                    }
+                ]
+            },
+            {
+                "question": "19年的股权变动中涉及股数量最大的一次非专场大宗交易是在哪天正式变动的？（时间回答XXXX-XX-XX）",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "识别出山东药玻2019年内所有非专场大宗交易的股权变动记录",
+                        "database": "AStockShareholderDB.LC_TransferPlan"
+                    },
+                    {
+                        "id": 2,
+                        "todo": "从上一步的结果中筛选出涉及股数量最多的一次变动，并确定其正式变动日期",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----25",
+        "team": [
+            {
+                "id": "tttt----25----8-2-1",
+                "question": "中南出版传媒集团股份有限公司的证券代码是多少？"
+            },
+            {
+                "id": "tttt----25----8-2-2",
+                "question": "该公司2019年母公司一季报中预付款项是多少？"
+            },
+            {
+                "id": "tttt----25----8-2-3",
+                "question": "总营收呢？"
+            },
+            {
+                "id": "tttt----25----8-2-4",
+                "question": "经营活动现金流入了多少？"
+            }
+        ],
+        "task": [
+            {
+                "question": "中南出版传媒集团股份有限公司的证券代码是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询中南出版传媒集团股份有限公司的证券代码。",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "该公司2019年母公司一季报中预付款项是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查找中南出版传媒集团股份有限公司2019年第一季度报告中的预付款项数额。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "总营收呢？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定中南出版传媒集团股份有限公司2019年第一季度报告中的总营收金额。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "经营活动现金流入了多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "获取中南出版传媒集团股份有限公司2019年第一季度报告中经营活动产生的现金流量净额。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----26",
+        "team": [
+            {
+                "id": "tttt----26----9-2-1",
+                "question": "000932的英文名称是什么？"
+            },
+            {
+                "id": "tttt----26----9-2-2",
+                "question": "该公司20年的年报中前三高管薪资是多少？"
+            },
+            {
+                "id": "tttt----26----9-2-3",
+                "question": "当年该公司是否成功资产重组？(回答是或者否)"
+            }
+        ],
+        "task": [
+            {
+                "question": "000932的英文名称是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询股票代码000932对应的英文名称",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "该公司20年的年报中前三高管薪资是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确认股票代码000932对应公司的完整名称和20年年报发布的确切日期",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询股票代码000932对应的公司在20年年报中公布的前三位高管的姓名及对应的薪酬信息",
+                        "database": "AStockFinanceDB.LC_AuditOpinion"
+                    }
+                ]
+            },
+            {
+                "question": "当年该公司是否成功资产重组？(回答是或者否)",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定股票代码000932对应公司20年内进行的所有重大资产重组事件",
+                        "database": "AStockEventsDB.LC_Credit"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "根据获取的信息，判断是否有成功的资产重组案例，并给出是或否的回答",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----27",
+        "team": [
+            {
+                "id": "tttt----27----10-2-1",
+                "question": "RXW中文全称是什么？"
+            },
+            {
+                "id": "tttt----27----10-2-2",
+                "question": "该公司上市时一共配售了多少张股？"
+            },
+            {
+                "id": "tttt----27----10-2-3",
+                "question": "21年该公司的研发投入是多少？"
+            }
+        ],
+        "task": []
+    },
+    {
+        "tid": "tttt----28",
+        "team": [
+            {
+                "id": "tttt----28----11-2-1",
+                "question": "Titan Wind Energy (Suzhou) Co.,Ltd.董秘是谁"
+            },
+            {
+                "id": "tttt----28----11-2-2",
+                "question": "20年首次信息发布中单笔回购资金总额上限最高的是多少？"
+            },
+            {
+                "id": "tttt----28----11-2-3",
+                "question": "怎么管理？"
+            }
+        ],
+        "task": [
+            {
+                "question": "Titan Wind Energy (Suzhou) Co.,Ltd.董秘是谁",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询Titan Wind Energy (Suzhou) Co.,Ltd.的董事会秘书姓名",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "20年首次信息发布中单笔回购资金总额上限最高的是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "识别出20年内所有首次发布的信息中的回购计划",
+                        "database": "AStockEventsDB.LC_SharesRepurchase"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从这些回购计划中，找出单笔回购资金总额上限最高的记录及其金额",
+                        "database": "AStockEventsDB.LC_SharesRepurchase"
+                    }
+                ]
+            },
+            {
+                "question": "怎么管理？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定这个问题具体指向哪个方面或对象的管理（例如：财务管理、时间管理等）。",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----29",
+        "team": [
+            {
+                "id": "tttt----29----12-2-1",
+                "question": "东兴证券2019年一共成功为多少家公司提供过担保？"
+            },
+            {
+                "id": "tttt----29----12-2-2",
+                "question": "这些担保项目中担保最多的金额是多少？"
+            },
+            {
+                "id": "tttt----29----12-2-3",
+                "question": "当年该公司有多少起合同纠纷？"
+            }
+        ],
+        "task": []
+    },
+    {
+        "tid": "tttt----30",
+        "team": [
+            {
+                "id": "tttt----30----13-2-1",
+                "question": "李一硕一共管理了多少支基金"
+            },
+            {
+                "id": "tttt----30----13-2-2",
+                "question": "这些基金中规模最大的是哪一个？"
+            },
+            {
+                "id": "tttt----30----13-2-3",
+                "question": "这支基金的管理人法人是谁？"
+            }
+        ],
+        "task": []
+    },
+    {
+        "tid": "tttt----31",
+        "team": [
+            {
+                "id": "tttt----31----14-2-1",
+                "question": "2019年12月12日哪家证券公司受到了处罚"
+            },
+            {
+                "id": "tttt----31----14-2-2",
+                "question": "他是多少家公司的股东？"
+            },
+            {
+                "id": "tttt----31----14-2-3",
+                "question": "哪家公司当年的借贷最多，共计多少？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2019年12月12日哪家证券公司受到了处罚",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询2019年12月12日受到处罚的证券公司的名称",
+                        "database": "InstitutionDB.PS_NewsSecurity"
+                    }
+                ]
+            },
+            {
+                "question": "他是多少家公司的股东？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "确定'他'指的是哪位个人或机构",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "基于上一步得到的信息，查询该个人或机构作为股东参与的公司数量",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "哪家公司当年的借贷最多，共计多少？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "明确'当年'具体指哪一年",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "基于上一步确定的时间范围，查询在此期间内所有公司的借贷记录",
+                        "database": "AStockEventsDB.LC_Credit"
+                    },
+                    {
+                        "id": 3,
+                        "todo": "根据借贷金额对公司进行排序，并找出借贷总额最多的公司及其具体的借贷总额",
+                        "database": "AStockEventsDB.LC_Credit"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----32",
+        "team": [
+            {
+                "id": "tttt----32----15-2-1",
+                "question": "深桑达最近一次停牌是什么时候？（时间回答XXXX-XX-XX）"
+            },
+            {
+                "id": "tttt----32----15-2-2",
+                "question": "当日哪家公司收盘价最高，最高价是多少？"
+            },
+            {
+                "id": "tttt----32----15-2-3",
+                "question": "是否创近一周的新高？（回答是或者否）"
+            }
+        ],
+        "task": [
+            {
+                "question": "深桑达最近一次停牌是什么时候？（时间回答XXXX-XX-XX）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询深桑达股票的最近一次停牌日期。",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "当日哪家公司收盘价最高，最高价是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定'当日'的具体日期。",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "根据上述确定的日期，查询该日所有公司股票的收盘价。",
+                        "database": "AStockQuoteDB.LC_StockQuotes"
+                    },
+                    {
+                        "id": "3",
+                        "todo": "从上一步获取的数据中，找出收盘价最高的公司及其价格。",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "是否创近一周的新高？（回答是或者否）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "基于前一问题确定的公司及日期，获取该公司过去一周包括指定日期在内的每日收盘价。",
+                        "database": "AStockQuoteDB.LC_StockQuotes"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "对比这些收盘价以判断指定日期的收盘价是否为近一周内最高。",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----33",
+        "team": [
+            {
+                "id": "tttt----33----16-2-1",
+                "question": "深圳市桑达实业股份有限公司最近一次创上市以来的新高是在什么时候？（时间回答XXXX-XX-XX）"
+            },
+            {
+                "id": "tttt----33----16-2-2",
+                "question": "当天涨幅超过10%股票有多少家？"
+            },
+            {
+                "id": "tttt----33----16-2-3",
+                "question": "这些公司中有哪些是连板的？"
+            }
+        ],
+        "task": [
+            {
+                "question": "深圳市桑达实业股份有限公司最近一次创上市以来的新高是在什么时候？（时间回答XXXX-XX-XX）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询深圳市桑达实业股份有限公司的股票代码",
+                        "database": "ConstantDB.SecuMain"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "使用获得的股票代码，查询该股票历史交易数据以确定其最新创历史新高的日期",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "当天涨幅超过10%股票有多少家？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定具体哪一天作为分析的时间点",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "根据选定的日期，查询所有股票的日收盘价和前一日收盘价，并计算涨幅",
+                        "database": ""
+                    },
+                    {
+                        "id": "3",
+                        "todo": "统计涨幅超过10%的股票数量",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "这些公司中有哪些是连板的？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "基于上一问题的结果，获取所有涨幅超过10%的股票列表及其连续上涨天数的信息",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "定义何为“连板”，例如连续两天或以上涨停",
+                        "database": ""
+                    },
+                    {
+                        "id": "3",
+                        "todo": "从涨幅超过10%的股票列表中筛选出符合“连板”定义的股票",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----34",
+        "team": [
+            {
+                "id": "tttt----34----17-2-1",
+                "question": "山东国瓷功能材料股份有限公司2021年9月23日开盘价是多少？"
+            },
+            {
+                "id": "tttt----34----17-2-2",
+                "question": "当天，外资占股多少？"
+            },
+            {
+                "id": "tttt----34----17-2-3",
+                "question": "当年及20年该公司的预案一共增发了多少股？"
+            }
+        ],
+        "task": []
+    },
+    {
+        "tid": "tttt----35",
+        "team": [
+            {
+                "id": "tttt----35----18-3-1",
+                "question": "北京国枫律师事务所2020年见证多少家公司的年度股东大会？"
+            },
+            {
+                "id": "tttt----35----18-3-2",
+                "question": "这些公司中有哪些当年股东减持了的？"
+            },
+            {
+                "id": "tttt----35----18-3-3",
+                "question": "当年哪家公司的涨幅最大，达到了多少，保留4位小数？"
+            }
+        ],
+        "task": [
+            {
+                "question": "北京国枫律师事务所2020年见证多少家公司的年度股东大会？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询北京国枫律师事务所在2020年作为见证机构参与了多少家公司的年度股东大会。",
+                        "database": "AStockEventsDB.LC_ShareholdersMeeting"
+                    }
+                ]
+            },
+            {
+                "question": "这些公司中有哪些当年股东减持了的？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "从上一步得到的公司列表中，查询哪些公司在2020年内有股东进行了减持行为。",
+                        "database": "AStockEventsDB.LC_SharesPledgedOrReleased"
+                    }
+                ]
+            },
+            {
+                "question": "当年哪家公司的涨幅最大，达到了多少，保留4位小数？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "根据上一步骤中获得的公司名单，查询2020年内每家公司股价的最大涨幅，并确定涨幅最大的那一家公司及其具体的涨幅值，结果保留四位小数。",
+                        "database": "AStockQuoteDB.LC_StockQuotes"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----36",
+        "team": [
+            {
+                "id": "tttt----36----19-2-1",
+                "question": "2019-01-04哪家公司主力净流入最多？"
+            },
+            {
+                "id": "tttt----36----19-2-2",
+                "question": "这家公司5日内平均成交额是多少，保留2位小数？"
+            },
+            {
+                "id": "tttt----36----19-2-3",
+                "question": "当日该指标超过该公司的一共有多少家？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2019-01-04哪家公司主力净流入最多？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "查询2019-01-04所有公司的主力净流入数据，并确定哪家公司主力净流入最多。",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "这家公司5日内平均成交额是多少，保留2位小数？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "根据前一问题确定的公司，查询该公司在2019-01-04及往前4个交易日（即2019-01-02至2019-01-04）的日成交额数据。",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "计算这5日的平均成交额并保留2位小数。",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "当日该指标超过该公司的一共有多少家？",
+                "task": [
+                    {
+                        "id": 1,
+                        "todo": "基于前两个问题中确定的日期（2019-01-04）和公司主力净流入的具体数值，查询当天所有公司主力净流入的数据。",
+                        "database": ""
+                    },
+                    {
+                        "id": 2,
+                        "todo": "统计有多少家公司当日主力净流入金额超过了上述特定公司的值。",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----37",
+        "team": [
+            {
+                "id": "tttt----37----20-2-1",
+                "question": "波司登在港股的股票代码是什么？"
+            },
+            {
+                "id": "tttt----37----20-2-2",
+                "question": "他的注册资本是多少？"
+            },
+            {
+                "id": "tttt----37----20-2-3",
+                "question": "他的员工人数哪年变动最大，前后差距是多少人？"
+            }
+        ],
+        "task": [
+            {
+                "question": "波司登在港股的股票代码是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询波司登在港股市场的股票代码",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "他的注册资本是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确认'他'指的是波司登公司，并查询波司登公司的注册资本",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "他的员工人数哪年变动最大，前后差距是多少人？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确认'他'指的是波司登公司，并收集波司登公司历年来的员工人数数据",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "基于收集到的员工人数数据，计算每年员工人数的变化量，并确定哪一年的员工人数变动最大以及具体的变动数值",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----38",
+        "team": [
+            {
+                "id": "tttt----38----21-2-1",
+                "question": "天弘沪深300ETF联接A基金的管理经理是谁？"
+            },
+            {
+                "id": "tttt----38----21-2-2",
+                "question": "所在基金公司管理了多少支基金？"
+            },
+            {
+                "id": "tttt----38----21-2-3",
+                "question": "哪只基金20年最后一次分红的税前分红最高，有多少，保留2位小数？"
+            }
+        ],
+        "task": [
+            {
+                "question": "天弘沪深300ETF联接A基金的管理经理是谁？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询天弘沪深300ETF联接A基金当前的管理经理姓名。",
+                        "database": "PublicFundDB.MF_InvestAdvisorOutline"
+                    }
+                ]
+            },
+            {
+                "question": "所在基金公司管理了多少支基金？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定天弘基金管理有限公司目前管理的基金总数。",
+                        "database": "PublicFundDB.MF_FundArchives"
+                    }
+                ]
+            },
+            {
+                "question": "哪只基金20年最后一次分红的税前分红最高，有多少，保留2位小数？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "找出2020年内所有基金最后一次分红记录中税前分红金额最高的那只基金及其具体数值，结果保留两位小数。",
+                        "database": "PublicFundDB.MF_Dividend"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----39",
+        "team": [
+            {
+                "id": "tttt----39----22-2-1",
+                "question": "JD.com, Inc.这家公司在美股英文名称是什么？"
+            },
+            {
+                "id": "tttt----39----22-2-2",
+                "question": "他的证券简称是什么？"
+            },
+            {
+                "id": "tttt----39----22-2-3",
+                "question": "20年该公司单日最高涨幅有多少"
+            }
+        ],
+        "task": [
+            {
+                "question": "JD.com, Inc.这家公司在美股英文名称是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询JD.com, Inc.在美股的英文全称",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "他的证券简称是什么？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询JD.com, Inc.的证券简称",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "20年该公司单日最高涨幅有多少",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定JD.com, Inc.在2020年的具体交易日期范围，即从2020年1月1日至2020年12月31日。",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查找JD.com, Inc.在2020年期间的所有交易日内的股价变动情况，包括开盘价、收盘价。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    },
+                    {
+                        "id": "3",
+                        "todo": "计算每个交易日的股价涨跌幅，并识别出其中单日最高涨幅的具体数值和对应的日期。",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----40",
+        "team": [
+            {
+                "id": "tttt----40----23-2-1",
+                "question": "携程网这家公司电话是多少？"
+            },
+            {
+                "id": "tttt----40----23-2-2",
+                "question": "他是什么时候成立的？（时间回答XXXX-XX-XX）"
+            },
+            {
+                "id": "tttt----40----23-2-3",
+                "question": "2020年9月18日这家公司的收盘价是多少"
+            }
+        ],
+        "task": [
+            {
+                "question": "携程网这家公司电话是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询携程网的公司联系方式",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "他是什么时候成立的？（时间回答XXXX-XX-XX）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定这里的'他'是指携程网，并查询携程网的成立日期",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "2020年9月18日这家公司的收盘价是多少",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定这里的'这家公司'是指携程网",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询携程网在2020年9月18日的收盘价",
+                        "database": "AStockBasicInfoDB.LC_StockQuotes"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----41",
+        "team": [
+            {
+                "id": "tttt----41----24-2-1",
+                "question": "2020年成立的CN公司有多少家？"
+            },
+            {
+                "id": "tttt----41----24-2-2",
+                "question": "哪家公司（证券简称）上市的时间最晚，是什么时候？（时间回答XXXX-XX-XX）"
+            },
+            {
+                "id": "tttt----41----24-2-3",
+                "question": "2019年的当天有多少家公司是上涨的？"
+            }
+        ],
+        "task": [
+            {
+                "question": "2020年成立的CN公司有多少家？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2020年成立且国家为CN的所有公司的数量。",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "哪家公司（证券简称）上市的时间最晚，是什么时候？（时间回答XXXX-XX-XX）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "找到所有已上市公司的上市日期，并确定哪个公司的上市日期最晚。同时记录下该公司的证券简称和对应的最晚上市日期。",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "2019年的当天有多少家公司是上涨的？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "定义'当天'的具体日期，例如2019-01-01。然后计算在该具体日期内股票收盘价高于开盘价的公司数量。",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----42",
+        "team": [
+            {
+                "id": "tttt----42----25-1-1",
+                "question": "比特矿业这家公司邮编多少？"
+            },
+            {
+                "id": "tttt----42----25-1-2",
+                "question": "上市了多少年"
+            },
+            {
+                "id": "tttt----42----25-1-3",
+                "question": "这些年A股一共上市了多少家公司？"
+            }
+        ],
+        "task": [
+            {
+                "question": "比特矿业这家公司邮编多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询比特矿业的公司基本信息，包括公司名称、地址、邮编等信息。",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "上市了多少年",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定具体询问的是哪家公司的上市时间长度。因为问题中没有明确指出是哪一家公司，需要进一步的信息来完成任务。",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "一旦知道了具体的公司名称，查询该公司的上市日期，并计算至今已经上市了多少年。",
+                        "database": "AStockFinanceDB.LC_AuditOpinion"
+                    }
+                ]
+            },
+            {
+                "question": "这些年A股一共上市了多少家公司？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "定义'这些年'的具体时间段，例如从2000年起至今或者其它特定的时间段。",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "基于上一步确定的时间范围，统计在此期间A股市场新上市的公司总数。",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----43",
+        "team": [
+            {
+                "id": "tttt----43----26-1-1",
+                "question": "TOUR他是否已经退市了？（是或者否）"
+            },
+            {
+                "id": "tttt----43----26-1-2",
+                "question": "这家公司19年最高收盘价是多少"
+            },
+            {
+                "id": "tttt----43----26-1-3",
+                "question": "当天有多少家公司退市了"
+            }
+        ],
+        "task": [
+            {
+                "question": "TOUR他是否已经退市了？（是或者否）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询证券代码为TOUR的公司是否已经退市",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            },
+            {
+                "question": "这家公司19年最高收盘价是多少",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定要查询的是哪家公司，需要公司的全名或证券代码",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "查询该公司在2019年的每日收盘价，并找出最高收盘价",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "当天有多少家公司退市了",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确认所指的具体日期，以获取当天退市公司的数量",
+                        "database": ""
+                    },
+                    {
+                        "id": "2",
+                        "todo": "根据提供的具体日期，统计当天所有退市的公司数量",
+                        "database": "ConstantDB.SecuMain"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----44",
+        "team": [
+            {
+                "id": "tttt----44----27-1-1",
+                "question": "2021年08月哪支基金税后分红最高"
+            },
+            {
+                "id": "tttt----44----27-1-2",
+                "question": "这支基金是什么时候生效的（时间回答XXXX-XX-XX）"
+            },
+            {
+                "id": "tttt----44----27-1-3",
+                "question": "基金所属公司的官网是什么"
+            }
+        ],
+        "task": [
+            {
+                "question": "2021年08月哪支基金税后分红最高",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "找出2021年08月所有基金的税后分红数据",
+                        "database": "PublicFundDB.MF_Dividend"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从上一步结果中，确定哪一支基金在2021年08月税后分红金额最高",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "这支基金是什么时候生效的（时间回答XXXX-XX-XX）",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "基于前一个问题识别出的基金，查询其成立日期",
+                        "database": "PublicFundDB.MF_FundArchives"
+                    }
+                ]
+            },
+            {
+                "question": "基金所属公司的官网是什么",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "基于已知的基金信息，查询该基金管理公司的官方网站地址",
+                        "database": "PublicFundDB.MF_CorporationInfo"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----45",
+        "team": [
+            {
+                "id": "tttt----45----28-1-1",
+                "question": "易方达基金管理有限公司在19年成立了多少支基金？"
+            },
+            {
+                "id": "tttt----45----28-1-2",
+                "question": "哪支基金的规模最大？"
+            },
+            {
+                "id": "tttt----45----28-1-3",
+                "question": "这支基金20年最后一次分红派现比例多少钱？"
+            }
+        ],
+        "task": [
+            {
+                "question": "易方达基金管理有限公司在19年成立了多少支基金？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询易方达基金管理有限公司在2019年成立的所有基金数量",
+                        "database": "PublicFundDB.MF_FundArchives"
+                    }
+                ]
+            },
+            {
+                "question": "哪支基金的规模最大？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "从易方达基金管理有限公司在2019年成立的所有基金中，找出规模最大的一支基金",
+                        "database": "PublicFundDB.MF_FundArchives"
+                    }
+                ]
+            },
+            {
+                "question": "这支基金20年最后一次分红派现比例多少钱？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "确定上一步骤中识别出的规模最大的那支基金，在2020年的最后一次分红派现的比例是多少",
+                        "database": "PublicFundDB.MF_Dividend"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----46",
+        "team": [
+            {
+                "id": "tttt----46----28-4-1",
+                "question": "南方基金管理股份有限公司在19年成立了多少支基金？"
+            },
+            {
+                "id": "tttt----46----28-4-2",
+                "question": "哪支基金的规模最大？"
+            },
+            {
+                "id": "tttt----46----28-4-3",
+                "question": "这支基金20年最后一次分红派现比例多少钱,保留2位小数？"
+            }
+        ],
+        "task": [
+            {
+                "question": "南方基金管理股份有限公司在19年成立了多少支基金？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询南方基金管理股份有限公司在2019年成立的所有基金",
+                        "database": "PublicFundDB.MF_FundArchives"
+                    }
+                ]
+            },
+            {
+                "question": "哪支基金的规模最大？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "从南方基金管理股份有限公司在2019年成立的基金中，找出规模最大的基金",
+                        "database": "PublicFundDB.MF_FundArchives"
+                    }
+                ]
+            },
+            {
+                "question": "这支基金20年最后一次分红派现比例多少钱,保留2位小数？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询上一步确定的最大规模基金在2020年的所有分红记录",
+                        "database": "PublicFundDB.MF_Dividend"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从这些分红记录中，找到2020年最后一次分红的派现比例，并保留两位小数",
+                        "database": "PublicFundDB.MF_Dividend"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----47",
+        "team": [
+            {
+                "id": "tttt----47----30-1-1",
+                "question": "中证指数有限公司发布了多少种指数？"
+            },
+            {
+                "id": "tttt----47----30-1-2",
+                "question": "这些指数包括了多少家公司？"
+            },
+            {
+                "id": "tttt----47----30-1-3",
+                "question": "在2020年调入过的有多少家？"
+            }
+        ],
+        "task": [
+            {
+                "question": "中证指数有限公司发布了多少种指数？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询中证指数有限公司发布的所有指数的数量。",
+                        "database": "IndexDB.LC_IndexBasicInfo"
+                    }
+                ]
+            },
+            {
+                "question": "这些指数包括了多少家公司？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "根据中证指数有限公司发布的指数，统计所有这些指数成分股所包含的不同公司的总数。",
+                        "database": "IndexDB.LC_IndexComponent"
+                    }
+                ]
+            },
+            {
+                "question": "在2020年调入过的有多少家？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询2020年内被加入到中证指数有限公司任何指数中的公司数量。",
+                        "database": "IndexDB.LC_IndexComponent"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----48",
+        "team": [
+            {
+                "id": "tttt----48----1-2-1",
+                "question": "铜陵有色金属集团股份有限公司的法人代表是谁？"
+            },
+            {
+                "id": "tttt----48----1-2-2",
+                "question": "铜陵有色金属集团股份有限公司在什么时候成立的？回复时给我YYYY/MM/DD的格式"
+            },
+            {
+                "id": "tttt----48----1-2-3",
+                "question": "铜陵有色金属集团股份有限公司的总经理是谁？"
+            }
+        ],
+        "task": [
+            {
+                "question": "铜陵有色金属集团股份有限公司的法人代表是谁？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询铜陵有色金属集团股份有限公司当前的法人代表姓名",
+                        "database": "AStockShareholderDB.LC_ActualController"
+                    }
+                ]
+            },
+            {
+                "question": "铜陵有色金属集团股份有限公司在什么时候成立的？回复时给我YYYY/MM/DD的格式",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询铜陵有色金属集团股份有限公司的成立日期，并以YYYY/MM/DD格式返回",
+                        "database": "AStockBasicInfoDB.LC_StockArchives"
+                    }
+                ]
+            },
+            {
+                "question": "铜陵有色金属集团股份有限公司的总经理是谁？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询铜陵有色金属集团股份有限公司当前的总经理姓名",
+                        "database": "AStockOperationsDB.LC_Staff"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----49",
+        "team": [
+            {
+                "id": "tttt----49----3-2-1",
+                "question": "深科技的信披网址是哪个网站?"
+            },
+            {
+                "id": "tttt----49----3-2-2",
+                "question": "该公司在过去的进行了几次非公开增发"
+            },
+            {
+                "id": "tttt----49----3-2-3",
+                "question": "最近一次非公开增发的数量是多少？"
+            }
+        ],
+        "task": [
+            {
+                "question": "深科技的信披网址是哪个网站?",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "找到深科技这家公司的官方信息披露网址。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "该公司在过去的进行了几次非公开增发",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询深科技在过去进行的所有非公开增发活动。",
+                        "database": "AStockEventsDB.LC_Credit"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "根据查询结果统计深科技总共进行了多少次非公开增发。",
+                        "database": ""
+                    }
+                ]
+            },
+            {
+                "question": "最近一次非公开增发的数量是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询深科技最近一次非公开增发的具体情况，包括发行数量等细节。",
+                        "database": "AStockEventsDB.LC_Credit"
+                    },
+                    {
+                        "id": "2",
+                        "todo": "从查询结果中提取出最近一次非公开增发的数量信息。",
+                        "database": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tid": "tttt----50",
+        "team": [
+            {
+                "id": "tttt----50----4-2-1",
+                "question": "福建坤彩材料科技股份有限公司的注册地在哪个省份？"
+            },
+            {
+                "id": "tttt----50----4-2-2",
+                "question": "该公司2020年年度报告中，未调整的合并资产负债表中提到的资产总计是多少？"
+            },
+            {
+                "id": "tttt----50----4-2-3",
+                "question": "他的2020年年度报告中，未调整的母公司资产负债表显示的负债合计是多少？"
+            }
+        ],
+        "task": [
+            {
+                "question": "福建坤彩材料科技股份有限公司的注册地在哪个省份？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查询福建坤彩材料科技股份有限公司的基本资料，以确定其注册地所在的省份。",
+                        "database": "InstitutionDB.LC_InstiArchive"
+                    }
+                ]
+            },
+            {
+                "question": "该公司2020年年度报告中，未调整的合并资产负债表中提到的资产总计是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "查找福建坤彩材料科技股份有限公司2020年的年度报告，获取其中未调整的合并资产负债表数据，特别关注资产总计的数值。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            },
+            {
+                "question": "他的2020年年度报告中，未调整的母公司资产负债表显示的负债合计是多少？",
+                "task": [
+                    {
+                        "id": "1",
+                        "todo": "定位福建坤彩材料科技股份有限公司2020年的年度报告，专注于母公司资产负债表部分，提取未调整状态下负债合计的具体数额。",
+                        "database": "AStockFinanceDB.LC_MainOperIncome"
+                    }
+                ]
+            }
+        ]
+    }
+]
